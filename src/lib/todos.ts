@@ -1,15 +1,16 @@
 import { writable } from 'svelte/store';
 
 export type Todo = {
+  id: number;
   done: boolean;
   descripcion: string;
 };
 
 const listaTareas: Todo[] = [
-  { done: true, descripcion: 'Lavar' },
-  { done: false, descripcion: 'Limpiar' },
-  { done: false, descripcion: 'Encerar' },
-  { done: false, descripcion: 'Lustrar' },
+  { id: 1, done: true, descripcion: 'Lavar' },
+  { id: 2, done: false, descripcion: 'Limpiar' },
+  { id: 3, done: false, descripcion: 'Encerar' },
+  { id: 4, done: false, descripcion: 'Lustrar' },
 ];
 
 export const { subscribe, update } = writable<Todo[]>(listaTareas);
