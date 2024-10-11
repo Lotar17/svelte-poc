@@ -7,10 +7,9 @@ export type Todo = {
 };
 
 const listaTareas: Todo[] = [
-  { id: 1, done: true, descripcion: 'Lavar' },
-  { id: 2, done: false, descripcion: 'Limpiar' },
-  { id: 3, done: false, descripcion: 'Encerar' },
-  { id: 4, done: false, descripcion: 'Lustrar' },
+  { id: 1, done: false, descripcion: 'Encerar' },
+  { id: 2, done: false, descripcion: 'Pulir' },
+  { id: 3, done: false, descripcion: 'Respirar' },
 ];
 
 export const { subscribe, update } = writable<Todo[]>(listaTareas);

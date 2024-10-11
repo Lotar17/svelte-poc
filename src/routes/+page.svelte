@@ -27,6 +27,10 @@
     class="flex flex-col gap-5 items-center justify-center h-screen w-screen"
   >
     <h1 class="text-3xl font-black">Svelte PoC</h1>
+    <input
+      class=" w-96 min-h-10 text-zinc-900 pl-3 font-medium"
+      placeholder="¿Qué tarea desea agregar?"
+    />
     <div
       in:fly={{ y: 200, duration: 2000, delay: 200 }}
       class="grid grid-cols-2 gap-14"
