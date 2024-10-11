@@ -23,7 +23,7 @@
   class="flex mt-3 gap-3 shadow-lg bg-neutral-900 p-2 w-80 max-h-40 overflow-y-auto flex-wrap"
 >
   <input on:change={changeStatus} type="checkbox" checked={tarea.done} />
-  <span>{tarea.descripcion}</span>
+  <span class=" pt-1">{tarea.descripcion}</span>
   <button class=" ml-auto" on:click={deleteTodo}>
     <span class="material-symbols-outlined"> delete </span>
   </button>
