@@ -25,7 +25,7 @@
 {#if transicionar}
   <div
     in:fly={{ y: 200, duration: 2000 }}
-    class="flex flex-row md:flex-col flex-wrap gap-5 items-center justify-center h-screen w-screen"
+    class="flex flex-row md:flex-col flex-wrap gap-5 items-center justify-center min-h-screen min-w-screen"
   >
     <h1 class="text-3xl font-black">Svelte PoC</h1>
     <input
