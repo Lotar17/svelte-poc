@@ -25,7 +25,7 @@
 {#if transicionar}
   <div
     in:fly={{ y: 200, duration: 2000 }}
-    class="flex flex-col gap-5 items-center justify-center h-screen w-screen"
+    class="flex flex-row md:flex-col flex-wrap gap-5 items-center justify-center h-screen w-screen"
   >
     <h1 class="text-3xl font-black">Svelte PoC</h1>
     <input
@@ -45,7 +45,7 @@
     />
     <div
       in:fly={{ y: 200, duration: 2000, delay: 200 }}
-      class="grid grid-cols-2 gap-14"
+      class="grid grid-cols-1 md:grid-cols-2 gap-14"
     >
       <div>
         <h1 class="text-2xl font-bold">Pendientes</h1>
