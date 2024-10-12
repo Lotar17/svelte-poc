@@ -1,7 +1,6 @@
 <script lang="ts">
   import { todos } from '$lib/todos';
   import TodoItem from '$lib/TodoItem.svelte';
-  import type { Todo } from '$lib/todos';
   import { crossfade, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import { flip } from 'svelte/animate';
@@ -19,6 +18,8 @@
     duration: 1500,
     easing: quintOut,
   });
+
+  let id = 3;
 </script>
 
 {#if transicionar}
@@ -34,13 +35,11 @@
         if (e.key !== 'Enter') return;
 
         const tareaNueva = {
-          id: Math.max(...$todos.map((tarea) => tarea.id)) + 1,
+          id: ++id,
           descripcion: e.currentTarget.value,
           done: false,
         };
-
         todos.add(tareaNueva);
-        console.log($todos);
         e.currentTarget.value = '';
       }}
     />
