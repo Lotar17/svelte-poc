@@ -25,6 +25,6 @@
   <input on:change={changeStatus} type="checkbox" checked={tarea.done} />
   <span class=" pt-1">{tarea.descripcion}</span>
   <button class=" ml-auto" on:click={deleteTodo}>
-    <span class="material-symbols-outlined"> delete </span>
+    <span class="material-symbols-outlined pt-1"> delete </span>
   </button>
 </div>

@@ -30,6 +30,19 @@
     <input
       class=" w-96 min-h-10 text-zinc-900 pl-3 font-medium"
       placeholder="¿Qué tarea desea agregar?"
+      on:keydown={(e) => {
+        if (e.key !== 'Enter') return;
+
+        const tareaNueva = {
+          id: Math.max(...$todos.map((tarea) => tarea.id)) + 1,
+          descripcion: e.currentTarget.value,
+          done: false,
+        };
+
+        todos.add(tareaNueva);
+        console.log($todos);
+        e.currentTarget.value = '';
+      }}
     />
     <div
       in:fly={{ y: 200, duration: 2000, delay: 200 }}
