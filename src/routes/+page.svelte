@@ -69,6 +69,7 @@
               animate:flip={{ duration: 500 }}
               in:receive={{ key: tarea.id, duration: 500 }}
               out:send={{ key: tarea.id, duration: 500 }}
+              class="opacity-40"
             >
               <TodoItem {tarea} />
             </li>
